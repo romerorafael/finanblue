@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Finanblue.Application/1.0.0": {
+        "dependencies": {
+          "Finanblue.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Finanblue.Application.dll": {}
+        }
+      },
+      "Finanblue.Domain/1.0.0": {
+        "runtime": {
+          "Finanblue.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Finanblue.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Finanblue.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

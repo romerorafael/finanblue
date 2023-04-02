@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Finanblue.Infra.Data\Finanblue.Infra.Data.csproj" />
+    <ProjectReference Include="..\Finanblue.Infra.IoC\Finanblue.Infra.IoC.csproj" />
+  </ItemGroup>
+
+</Project>

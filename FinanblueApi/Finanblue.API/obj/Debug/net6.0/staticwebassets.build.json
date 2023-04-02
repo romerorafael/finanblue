@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X80E2GjaD+K/qVcf02I0LpcCProcxwX75jEfFrNXjt0=",
+  "Source": "Finanblue.API",
+  "BasePath": "_content/Finanblue.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
