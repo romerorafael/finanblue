@@ -60,6 +60,13 @@ namespace Finanblue.API.Controllers
         {
             try
             {
+                purchaseBody.Purchase.Total = 0;
+
+                foreach (var product in purchaseBody.Products)
+                {
+                    purchaseBody.Purchase.Total += product.Price;
+                }
+
                 int data = await _purchaseService.Add(purchaseBody.Purchase);
                 foreach (Product product in purchaseBody.Products)
                 {

@@ -17,24 +17,29 @@
                         <option *ngFor="let product of products" value="{{product.id}}">{{product.name}} </option>
                     </select>
                     <input type="number" min="1" name="quantity" id="quantity" [(ngModel)]="quantity">
-                    <button type="button" (click)="addProductSale()"> Adicionar </button>
+                    <button class="quantityButton"type="button" (click)="addProductSale()" [disabled]="!(quantity != 0 && productId != 0)"> Adicionar </button>
                 </div>
 
                 <div class="productList" *ngIf="productsSale.length > 0">
-                    <div *ngFor="let productSale of productsSale">
+                    <div class="saleTable">
+                        <p><b>Produtos</b></p>
+                        <p><b>Quantidade</b></p>
+                    </div>
+                    <div class="saleTable" *ngFor="let productSale of productsSale">
                         <p>{{productSale.product.name}}</p>
                         <p>{{productSale.quantity}}</p>
+                        <button class="quantityButton"type="button" (click)="removeProductSale(productSale)"> Remover </button>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="divTotal">
                 <label for="total">Total:</label>
                 <input id="total" name="total" type="text" ngModel #total="ngModel" placeholder="R$0,00" disabled  [(ngModel)]="purchase.total">
             </div>
 
             <div class="buttonsContainer">
                 <button type="button" (click)="close()">  Fechar </button>
-                <button [disabled]="purchaseForm.invalid && productsSale.length == 0"  type="submit"> Enviar</button>
+                <button [disabled]="!(productsSale.length != 0 && purchase.companyId != 0)"  type="submit"> Enviar</button>
             </div>
         </form>
     </div>

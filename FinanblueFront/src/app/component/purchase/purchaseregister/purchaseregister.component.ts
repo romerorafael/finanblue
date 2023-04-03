@@ -50,6 +50,12 @@ export class PurchaseregisterComponent implements OnInit{
     this.quantity = 0;
   }
 
+  removeProductSale(productSale: ProductSale){
+    debugger
+    this.purchase.total -= productSale.product.price * productSale.quantity;
+    this.productsSale.splice(this.productsSale.indexOf(productSale));
+  }
+
   savePurchase(purchase:Purchase){
     let sendProducts : Product[] = new Array();
     this.productsSale.forEach(productSale =>{
