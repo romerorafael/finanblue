@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Company } from 'src/app/entities/company/company';
 import { CompanyService } from 'src/app/services/company/company.service';
 
@@ -8,16 +8,17 @@ import { CompanyService } from 'src/app/services/company/company.service';
   styleUrls: ['./company.component.css']
 })
 
-export class CompanyComponent {
+export class CompanyComponent implements OnInit{
 
-  companies: Company[] = new Array();
+  public companies: Company[] = new Array();
+  public showModal: boolean = false;
 
   constructor(private companyService : CompanyService){}
 
-  ngOnInit(){
-    this.companyService.getAll().subscribe(data=>{
-      if(data) this.companies = data;
-      console.log(data)
+  async ngOnInit(){
+    this.companyService.getAll().subscribe( (data:any)=>{
+      this.companies = data;
     })
   }
+  
 }

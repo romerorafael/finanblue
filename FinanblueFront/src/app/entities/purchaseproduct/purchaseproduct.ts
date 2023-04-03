@@ -1,5 +1,5 @@
 export interface Purchaseproduct {
-    Id: number,
-    ProductId: number,
-    CompanyId: number
+    id: number,
+    productId: number,
+    companyId: number
 }

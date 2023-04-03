@@ -19,7 +19,7 @@ export class CompanyService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin' : '*' })
   }
 
-  getAll() : Observable<Company[]>{
+   getAll() : Observable<Company[]>{
     return this.httpClient.get<Company[]>( apiUrl + "/GetAll" )
     .pipe(
       retry(2),

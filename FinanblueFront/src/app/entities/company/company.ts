@@ -1,6 +1,6 @@
 export interface Company {
-    Id: number,
-    Cnpj: string,
-    Name: string,
-    Activity: string
+    id: number,
+    cnpj: string,
+    name: string,
+    activity: string
 }

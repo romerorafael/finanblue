@@ -1,1 +1,10 @@
-<p>company works!</p>
+<div class="companyContainer">
+    <div class="addCard" (click)="showModal=true">
+        +
+    </div>
+    <div *ngFor="let company of companies; index as i;">
+        <CompanyCard [company]="company"></CompanyCard>
+    </div>
+</div>
+
+<Companyregister *ngIf="showModal"></Companyregister>

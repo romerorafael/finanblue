@@ -1,0 +1,25 @@
+<div class="companyModal">
+    <div class="modalContainer">
+        <h2>Registre sua nova Empresa</h2>
+        <form (ngSubmit)="saveCompany(companyForm.value)" #companyForm="ngForm">
+            <div>
+                <label for="name">Nome:</label>
+                <input id="name" name="name" type="text" placeholder="Nome da empresa" ngModel #name="ngModel" required minlength="3">
+                <!-- <div *ngIf="name.errors?.['required']" class="erro-detalhes"> Campo obrigatório  </div>
+                <div *ngIf="name.errors?.['minlength']" class="erro-detalhes"> Informe ao menos 3  </div> -->
+            </div>
+            <div>
+                <label for="cnpj">Cnpj:</label>
+                <input id="cnpj" name="cnpj"type="text" placeholder="Cnpj da empresa" ngModel #cnpj="ngModel" required >
+                <!-- <div *ngIf="name.errors?.['required']" class="erro-detalhes"> Campo obrigatório  </div> -->
+
+            </div>
+            <div>
+                <label for="activity">Atividade:</label>
+                <input id="activity" name="activity" type="text" placeholder="Atividade da empresa" ngModel #activity="ngModel" >
+            </div>
+
+            <button [disabled]="companyForm.invalid || companyForm.invalid"   type="submit"> Enviar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+.mainContainer
+{
+    display: grid;
+    grid-template-rows: 10vh 0 minmax(85vh, auto) 5vh;
+}
