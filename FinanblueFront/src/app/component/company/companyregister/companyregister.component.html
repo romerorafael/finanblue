@@ -19,7 +19,10 @@
                 <input id="activity" name="activity" type="text" placeholder="Atividade da empresa" ngModel #activity="ngModel" >
             </div>
 
-            <button [disabled]="companyForm.invalid || companyForm.invalid"   type="submit"> Enviar</button>
+            <div class="buttonsContainer">
+                <button type="button" (click)="close()">  Fechar </button>
+                <button [disabled]="companyForm.invalid || companyForm.invalid"   type="submit"> Enviar</button>
+            </div>
         </form>
     </div>
 </div>

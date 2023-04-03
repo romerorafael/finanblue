@@ -20,5 +20,9 @@ export class CompanyComponent implements OnInit{
       this.companies = data;
     })
   }
+
+  closeModal(e:any){
+    this.showModal= e;
+  }
   
 }
