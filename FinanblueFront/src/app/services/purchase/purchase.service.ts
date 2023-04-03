@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { Configuration } from 'src/app/app.constants';
-import { Purchase } from 'src/app/entities/purchase/purchase';
+import { Purchase, PurchaseBody } from 'src/app/entities/purchase/purchase';
 
 const apiUrl = Configuration.GetApiUrl() + "api/purchase";
 
@@ -33,7 +33,7 @@ export class PurchaseService {
     )
   }
 
-  create( purchase: Purchase) : Observable<Purchase>{
+  create( purchase: PurchaseBody) : Observable<Purchase>{
     return this.httpClient.post<Purchase>(apiUrl + `/Post`, JSON.stringify(purchase), this.httpOptions)
     .pipe(
       retry(2),

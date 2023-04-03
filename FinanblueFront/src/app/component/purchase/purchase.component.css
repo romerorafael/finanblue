@@ -1,0 +1,19 @@
+.purchaseContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 5rem;
+}
+
+.addCard{
+    border: 1px solid red;
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 5rem;
+    cursor: pointer;
+}

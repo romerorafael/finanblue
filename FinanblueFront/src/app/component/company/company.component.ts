@@ -15,7 +15,7 @@ export class CompanyComponent implements OnInit{
 
   constructor(private companyService : CompanyService){}
 
-  async ngOnInit(){
+    ngOnInit() : void{
     this.companyService.getAll().subscribe( (data:any)=>{
       this.companies = data;
     })

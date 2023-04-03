@@ -1,1 +1,10 @@
-<p>purchase works!</p>
+<div class="purchaseContainer">
+    <div class="addCard" (click)="showModal=true">
+        +
+    </div>
+    <div *ngFor="let purchase of purchases; index as i;">
+        <PurchaseCard [purchase]="purchase"></PurchaseCard>
+    </div>
+</div>
+
+<Purchaseregister *ngIf="showModal" (closeModal)="closeModal($event)" ></Purchaseregister>

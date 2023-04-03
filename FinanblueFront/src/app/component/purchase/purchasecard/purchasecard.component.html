@@ -1,0 +1,14 @@
+<div class="cardBody">
+    <div class="leftSide">
+        <h1>R$ {{purchase.total}}</h1>
+        <small class="companyName"> ({{purchase.companyName}}) </small>
+    </div>
+    <div class="rigthSide">
+        <h3>Produtos</h3>
+        <div class="productsList">
+            <ul>
+                <li *ngFor="let product of purchase.products"> {{product.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

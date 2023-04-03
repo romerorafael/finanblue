@@ -1,0 +1,44 @@
+.cardBody{
+    border: 1px solid red;
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.cardBody p{
+    margin-top: 1rem;
+}
+
+.leftSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.leftSide .companyName{
+    margin-top: 0.5rem;
+}
+
+.rigthSide{
+    margin-left: 2rem;
+}
+.rigthSide h3{
+    margin-bottom: 1rem;
+}
+.rigthSide .productsList{
+    max-height: 100px;
+    overflow-y: scroll;
+    width: 100px;
+}
+.rigthSide .productsList ul{
+    list-style: none;
+}
+.rigthSide .productsList ul li{
+   border-bottom: 1px solid #d4d4d4;
+   padding-bottom: 0.3rem;
+   text-align: center;
+}

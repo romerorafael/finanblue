@@ -1,0 +1,41 @@
+<div class="purchaseModal">
+    <div class="modalContainer">
+        <h2>Registre sua Compra</h2>
+        <form (ngSubmit)="savePurchase(purchase)" #purchaseForm="ngForm">
+            <div>
+                <label for="companyId">Empresa:</label>
+                <select id="companyId" name="companyId" ngModel #companyId="ngModel" [(ngModel)]="purchase.companyId">
+                    <option disabled> Escolha a empresa fornecedora </option>
+                    <option *ngFor="let company of companies" value="{{company.id}}">{{company.name}} </option>
+                </select>
+            </div>
+            <div>
+                <label for="products">Produtos:</label>
+                <div class="addProduct">
+                    <select id="productSale" name="productSale" type="text" ngModel #companyId="ngModel" [(ngModel)]="productId">
+                        <option disabled> Escolha a empresa fornecedora </option>
+                        <option *ngFor="let product of products" value="{{product.id}}">{{product.name}} </option>
+                    </select>
+                    <input type="number" min="1" name="quantity" id="quantity" [(ngModel)]="quantity">
+                    <button type="button" (click)="addProductSale()"> Adicionar </button>
+                </div>
+
+                <div class="productList" *ngIf="productsSale.length > 0">
+                    <div *ngFor="let productSale of productsSale">
+                        <p>{{productSale.product.name}}</p>
+                        <p>{{productSale.quantity}}</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="total">Total:</label>
+                <input id="total" name="total" type="text" ngModel #total="ngModel" placeholder="R$0,00" disabled  [(ngModel)]="purchase.total">
+            </div>
+
+            <div class="buttonsContainer">
+                <button type="button" (click)="close()">  Fechar </button>
+                <button [disabled]="purchaseForm.invalid && productsSale.length == 0"  type="submit"> Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -17,6 +17,8 @@ import { CompanyregisterComponent } from './component/company/companyregister/co
 import { CommonModule } from '@angular/common';
 import { ProductcardComponent } from './component/product/productcard/productcard.component';
 import { ProductregisterComponent } from './component/product/productregister/productregister.component';
+import { PurchasecardComponent } from './component/purchase/purchasecard/purchasecard.component';
+import { PurchaseregisterComponent } from './component/purchase/purchaseregister/purchaseregister.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ProductregisterComponent } from './component/product/productregister/pr
     CompanyregisterComponent,
     ProductcardComponent,
     ProductregisterComponent,
-
+    PurchasecardComponent,
+    PurchaseregisterComponent
   ],
   imports: [
     BrowserModule,

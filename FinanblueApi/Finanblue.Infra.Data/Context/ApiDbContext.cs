@@ -83,7 +83,7 @@ namespace Finanblue.Infra.Data.Context
                 new Purchase
                 {
                     Id = 1,
-                    Total = (decimal)1.1,
+                    Total = (decimal)3,
                     CompanyId = 1,               
                 }
             );
