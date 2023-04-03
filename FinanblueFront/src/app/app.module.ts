@@ -15,6 +15,8 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { CompanycardComponent } from './component/company/companycard/companycard.component';
 import { CompanyregisterComponent } from './component/company/companyregister/companyregister.component';
 import { CommonModule } from '@angular/common';
+import { ProductcardComponent } from './component/product/productcard/productcard.component';
+import { ProductregisterComponent } from './component/product/productregister/productregister.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CommonModule } from '@angular/common';
     NotFoundComponent,
     CompanycardComponent,
     CompanyregisterComponent,
+    ProductcardComponent,
+    ProductregisterComponent,
 
   ],
   imports: [

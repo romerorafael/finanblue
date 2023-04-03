@@ -1,0 +1,24 @@
+<div class="productModal">
+    <div class="modalContainer">
+        <h2>Registre seu novo Produto</h2>
+        <form (ngSubmit)="saveProduct(productForm.value)" #productForm="ngForm">
+            <div>
+                <label for="name">Nome:</label>
+                <input id="name" name="name" type="text" placeholder="Nome do Produto" ngModel #name="ngModel" required minlength="3">
+            </div>
+            <div>
+                <label for="description">Descrição:</label>
+                <input id="description" name="description"type="text" placeholder="Descrição do Produto" ngModel #description="ngModel" required >
+            </div>
+            <div>
+                <label for="price">Preço:</label>
+                <input id="price" name="price" type="number" min="0" placeholder="Preço" ngModel #price="ngModel" required>
+            </div>
+
+            <div class="buttonsContainer">
+                <button type="button" (click)="close()">  Fechar </button>
+                <button [disabled]="productForm.invalid || productForm.invalid"   type="submit"> Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
